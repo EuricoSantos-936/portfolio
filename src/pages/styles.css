@@ -1,0 +1,173 @@
+body{
+    background: #eaeceb;
+    background-attachment: fixed;
+}
+/* NavBar styles*/
+
+.navbar{
+    font-size: 1.3rem;
+    
+  backdrop-filter: blur(15px);
+}
+.logo{
+    margin-left: 30%;
+    
+}
+.navbar-toggler{
+    margin-right: 10%;
+}
+.nav-link{
+    margin-right: 20px;
+    display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-link:hover {
+    opacity: 1;
+  }
+  
+.nav-link::before {
+  transition: 150ms;
+  height: 3px;
+  content: "";
+  position:absolute;
+  background-color: #64178a;
+
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 5px;
+}
+
+.nav-link-ltr:hover::before {
+  width:85%;
+}
+/* Homepage styles*/
+
+.homepagebackground{
+    width: 100%;
+    height: 100vh;
+    padding-top: 12%;
+    font-size: 1.4em;
+    
+}
+.hometext{
+    color: #64178a;
+    text-shadow: 2px #000000c5;
+    text-align: left;
+    
+}
+.Typewriter{
+    color:#64178a;
+}
+
+.imagedev{
+   /*background-image: url(../assets/3124.png);*/
+    max-width: 600px;
+    height: 300px;
+
+}
+.contactbtn{
+    background: transparent;
+    border: none;
+}
+.btnsocial{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Aboutpage styles*/
+
+.aboutbackground{
+    width: 100%;
+    height: 100vh;
+    padding-top: 12%;
+}
+.abouttext{
+    color: rgb(100, 23, 138);
+    text-shadow: 1px rgb(148, 148, 148);
+    text-align: justify;
+}
+.abouttexttitle{
+    color: rgb(49, 38, 73);
+}
+.skillstext li{
+    color:#64178a;
+    text-shadow: 1px rgb(148, 148, 148);
+}
+.aboutimage{
+  /*background-image: url(../assets/websitedev.png);*/
+  max-width: 500px;
+  height: 350px;
+  margin-left: 10% ;
+}
+ul{
+    list-style-type: none;
+}
+
+/*Project Page*/
+.project{
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+.project-col{
+    background-color: beige;
+    padding-top: 10px;
+    
+}
+
+/*Contact Page*/
+.contactform{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnsocial-contact{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+/* Footer styles*/
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    color: rgb(100, 23, 138);
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .homepagebackground{
+        text-align: center;
+        overflow:auto;
+        align-content: space-evenly;
+        margin-top: auto;
+        padding-bottom: 12%;
+    }
+    .imagedev{
+        padding-top: 10px;
+    }
+    .btnsocial{
+        justify-items: flex-start;
+    }
+    .abouttextbackground{
+        margin-top: auto;
+        padding-bottom: 12%;
+        margin:auto;
+    }
+    .nav-link-ltr:hover::before {
+        width:15%;
+      }
+    .contactform{
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
