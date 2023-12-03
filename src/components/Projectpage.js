@@ -50,7 +50,7 @@ const projects = [
 function Projectpage (){
   return (
     <Grid container spacing={4} justifyContent="center" className="project">
-       {projects.map((project) => (
+       {projects.reverse().map((project) => (
         <Grid item key={project.id} sx={{ marginTop: 16 }}>
        <Card sx={{boxShadow: '1px 4px 8px rgba(100, 23, 138, 0.2)', borderRadius: 2, maxWidth: 345, padding: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <CardMedia
