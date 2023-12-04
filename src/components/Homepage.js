@@ -19,7 +19,7 @@ function Home() {
           <Col md={4}>            
             <Col className="hometext">
                 <h2 >Hi! <br />I'm Eurico Santos</h2>
-                <Typewriter options={{strings: ["Full-stack Developer","JavaScript Developer"],
+                <Typewriter options={{strings: ["Python Developer","React.js Developer","Full-Stack Developer"],
                  autoStart: true,loop: true, deleteSpeed: 50, }}/>
                 </Col>
           </Col>
