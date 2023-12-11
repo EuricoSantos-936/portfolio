@@ -19,7 +19,7 @@ function Aboutpage() {
                     </Col>
                     <Col md={5}>
                         <h3 className='abouttexttitle'>About Me</h3>
-                        <p className='abouttext'>I'm a self-taught Front End developer from Portugal. I'm looking to apply on any project, alone or on team, to learn and upgrade my skill, always offering the best service to the client.
+                        <p className='abouttext'>I'm a self-taught Web developer from Portugal. I'm looking to apply on any project, alone or on team, to learn and upgrade my skill, always offering the best service to the client.
                         </p>
                         <br />
                         <br />
