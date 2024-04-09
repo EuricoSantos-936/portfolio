@@ -73,7 +73,7 @@ function Projectpage() {
             sx={{
               boxShadow: "1px 4px 8px rgba(100, 23, 138, 0.2)",
               borderRadius: 2,
-              maxWidth: 345,
+              maxWidth: 300,
               padding: 3,
               display: "flex",
               flexDirection: "column",
