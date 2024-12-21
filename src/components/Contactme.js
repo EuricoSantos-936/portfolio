@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { Card, CardContent, TextField, Button, Typography } from '@mui/material';
 import '../pages/styles.css';
 import { PiGithubLogoBold,PiLinkedinLogoBold,PiEnvelopeSimpleOpenFill } from "react-icons/pi";
+import { Helmet } from 'react-helmet';
 
 function Contact () {
   const [formData, setFormData] = useState({
@@ -53,6 +54,17 @@ function Contact () {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Eurico Santos</title>
+        <meta
+          name="description"
+          content="Get in touch with Eurico Santos. Use the contact form or reach out via GitHub, LinkedIn, or email."
+        />
+        <meta
+          name="keywords"
+          content="contact, Eurico Santos, GitHub, LinkedIn, email, cybersecurity, form"
+        />
+      </Helmet>
       <Card
         sx={{
           maxWidth: 400,

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../pages/styles.css';
+import { Helmet } from 'react-helmet';
 import { Container, Row, Col } from 'react-bootstrap'
 import {
   BiLogoReact,
@@ -17,6 +18,17 @@ import animationData from '../assets/animation_lkcbwe51.json';
 function Aboutpage() {
     return (
       <div className="aboutbackground">
+        <Helmet>
+          <title>About Eurico Santos</title>
+          <meta
+            name="description"
+            content="Learn more about Eurico Santos, an aspiring cybersecurity professional with skills in SIEM, incident response, digital forensics, and Python."
+          />
+          <meta
+            name="keywords"
+            content="cybersecurity, SIEM, incident response, digital forensics, Python, React"
+          />
+        </Helmet>
         <Container>
           <Row className="abouttextbackground">
             <Col md={7}>

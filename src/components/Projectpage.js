@@ -15,6 +15,7 @@ import {
   Button,
 } from "@mui/material";
 import { PiGithubLogoBold, PiLinkSimpleBold } from "react-icons/pi";
+import { Helmet } from "react-helmet";
 
 //to add projects
 const projects = [
@@ -66,59 +67,67 @@ const projects = [
 
 function Projectpage() {
   return (
+     <><Helmet>
+      <title>Projects by Eurico Santos</title>
+      <meta
+        name="description"
+        content="Explore projects by Eurico Santos, including SIEM with ELK Stack, Secure Network, and more." />
+      <meta
+        name="keywords"
+        content="projects, cybersecurity, React, Python, SIEM, ELK Stack, secure networks" />
+    </Helmet>
     <Grid container spacing={4} justifyContent="center" className="project">
-      {projects.reverse().map((project) => (
-        <Grid item key={project.id} sx={{ marginTop: 16 }}>
-          <Card
-            sx={{
-              boxShadow: "1px 4px 8px rgba(100, 23, 138, 0.2)",
-              borderRadius: 2,
-              maxWidth: 300,
-              maxHeight:400,
-              padding: 3,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <CardMedia
-              sx={{ height: 140, borderRadius: 2 }}
-              image={project.img}
-              title={project.title}
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="h5"
-                component="div"
-                sx={{ textAlign: "center" }}
-              >
-                {project.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ textAlign: "center" }}
-              >
-                {project.desc}
-              </Typography>
-              <br />
-              <Typography sx={{ textAlign: "center", alignSelf: "center" }}>
-                {project.mats}
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ alignSelf: "center" }}>
-              <Button href={project.code}>
-                <PiGithubLogoBold size={32} color="#black" weight="bold" />
-              </Button>
-              <Button href={project.link}>
-                <PiLinkSimpleBold size={32} color="#black" weight="bold" />
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+        {projects.reverse().map((project) => (
+          <Grid item key={project.id} sx={{ marginTop: 16 }}>
+            <Card
+              sx={{
+                boxShadow: "1px 4px 8px rgba(100, 23, 138, 0.2)",
+                borderRadius: 2,
+                maxWidth: 300,
+                maxHeight: 400,
+                padding: 3,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
+              <CardMedia
+                sx={{ height: 140, borderRadius: 2 }}
+                image={project.img}
+                title={project.title} />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  sx={{ textAlign: "center" }}
+                >
+                  {project.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ textAlign: "center" }}
+                >
+                  {project.desc}
+                </Typography>
+                <br />
+                <Typography sx={{ textAlign: "center", alignSelf: "center" }}>
+                  {project.mats}
+                </Typography>
+              </CardContent>
+              <CardActions sx={{ alignSelf: "center" }}>
+                <Button href={project.code}>
+                  <PiGithubLogoBold size={32} color="#black" weight="bold" />
+                </Button>
+                <Button href={project.link}>
+                  <PiLinkSimpleBold size={32} color="#black" weight="bold" />
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid></>
   );
 }
 
