@@ -52,64 +52,99 @@ function Contact () {
   const textFieldStyles = { width: '100%', marginTop: '0', marginBottom:'10px'};
 
   return (
-    <Card sx={{ maxWidth: 400, width: '100%', boxShadow: '1px 4px 8px rgba(100, 23, 138, 0.2)'}} className='contactform'>
-    <CardContent>
-      <Typography sx={{ textAlign: 'center'}} variant="h5" component="h1" gutterBottom>
-        Contact Us
-      </Typography>
-    <form className='form' onSubmit={handleSubmit}>
-      <TextField
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        sx={textFieldStyles}
-      />
-      <TextField
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className='textform'
-        sx={textFieldStyles}
-      />
-      <TextField
-         name="message"
-         multiline
-        rows={4} 
-        placeholder="Message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-        className='textform'
-        sx={textFieldStyles}
-      />
-        <Button type="submit" style={customButtonStyle} fullWidth>
-            Submit
-        </Button>
-    </form>
-    </CardContent>
-    <div className='btnsocial-contact'>
-          <button onClick={() => {
+    <>
+      <Card
+        sx={{
+          maxWidth: 400,
+          width: "100%",
+          boxShadow: "1px 4px 8px rgba(100, 23, 138, 0.2)",
+        }}
+        className="contactform"
+      >
+        <CardContent>
+          <Typography
+            sx={{ textAlign: "center" }}
+            variant="h5"
+            component="h1"
+            gutterBottom
+          >
+            Contact Us
+          </Typography>
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            sx={{ textAlign: "center", marginBottom: "20px" }}
+          >
+            If you have any questions, inquiries, or just want to connect,
+            please fill out the form below. I look forward to hearing from you!
+          </Typography>
+          <form className="form" onSubmit={handleSubmit}>
+            <TextField
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              sx={textFieldStyles}
+            />
+            <TextField
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="textform"
+              sx={textFieldStyles}
+            />
+            <TextField
+              name="message"
+              multiline
+              rows={4}
+              placeholder="Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="textform"
+              sx={textFieldStyles}
+            />
+            <Button type="submit" style={customButtonStyle} fullWidth>
+              Submit
+            </Button>
+          </form>
+        </CardContent>
+        <div className="btnsocial-contact">
+          <button
+            onClick={() => {
               window.open("https://github.com/EuricoSantos-936");
             }}
-              className='contactbtn'><PiGithubLogoBold size={32} color="#64178a" weight="bold"/></button>   
-          
-          <button onClick={() => {
-              window.open("https://www.linkedin.com/in/eurico-santos-545b57109");
-            }}
-              className='contactbtn'><PiLinkedinLogoBold size={32} color="#64178a" weight="bold"/></button>
-          <button onClick={() => {
-              window.open('mailto:euricosantos_936@hotmail.com');
-            }}
-              className='contactbtn'><PiEnvelopeSimpleOpenFill size={32} color="#64178a" weight="bold" /></button>
-          </div>
-    </Card>
+            className="contactbtn"
+          >
+            <PiGithubLogoBold size={32} color="#64178a" weight="bold" />
+          </button>
 
+          <button
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/eurico-santos-545b57109"
+              );
+            }}
+            className="contactbtn"
+          >
+            <PiLinkedinLogoBold size={32} color="#64178a" weight="bold" />
+          </button>
+          <button
+            onClick={() => {
+              window.open("mailto:euricosantos_936@hotmail.com");
+            }}
+            className="contactbtn"
+          >
+            <PiEnvelopeSimpleOpenFill size={32} color="#64178a" weight="bold" />
+          </button>
+        </div>
+      </Card>
+    </>
   );
 };
 

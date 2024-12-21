@@ -1,7 +1,7 @@
 import React from "react";
 import "../pages/styles.css";
-import project1 from "../assets/project_portfolio.png";
-import project2 from "../assets/advice_generator.png";
+import project1 from "../assets/elastic-logo-V-full_color.jpg";
+import project2 from "../assets/Screenshot-2020-02-15-at-15.54.25.png";
 import project3 from "../assets/newsletter-signup.png";
 import project4 from "../assets/markdown-previewer-fcc.png";
 import project5 from "../assets/cinereservation.png";
@@ -20,21 +20,21 @@ import { PiGithubLogoBold, PiLinkSimpleBold } from "react-icons/pi";
 const projects = [
   {
     id: 1,
-    title: "EuricoPortfolio",
-    desc: "Personal website that showcases my projects.",
-    mats: "React.js - BootStrap - MUI",
+    title: "SIEM ELK Stack",
+    desc: "SIEM with ELK Stack.",
+    mats: "Elasticsearch - Logstash - Kibana - Filebeat",
     img: project1,
     link: "#",
-    code: "https://github.com/EuricoSantos-936/portfolio",
+    code: "https://github.com/EuricoSantos-936/SIEM-ELK-Stack",
   },
   {
     id: 2,
-    title: "Advice Generator",
-    desc: "Advice Generator app challenge by Frontend Mentor",
-    mats: "Vue.js - Vite - API",
+    title: "Secure Network",
+    desc: "Segmented, secure, and functional computer network",
+    mats: "Cisco packet tracer - Firewall - AD",
     img: project2,
-    link: "https://advice-generator-app-vue-bizhead.vercel.app/",
-    code: "https://github.com/EuricoSantos-936/Advice-generator-app-vue",
+    link: "#",
+    code: "https://github.com/EuricoSantos-936/Secure-Network-CISCO-Firewall-AD",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Markdown previewer",
+    title: "Markdown prev",
     desc: "Markdown previewer for freeCodeCamp project",
     mats: "React.js - TypeScript - Vite",
     img: project4,
@@ -74,6 +74,7 @@ function Projectpage() {
               boxShadow: "1px 4px 8px rgba(100, 23, 138, 0.2)",
               borderRadius: 2,
               maxWidth: 300,
+              maxHeight:400,
               padding: 3,
               display: "flex",
               flexDirection: "column",

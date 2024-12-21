@@ -25,8 +25,10 @@ function Home() {
               <Typewriter
                 options={{
                   strings: [
-                    "React Developer",
-                    "Front-end Developer",
+                    "Cybersecurity Analyst",
+                    "Incident Response, SIEM and Threat Detection Specialist",
+                    "Forensics Enthusiast",
+                    "Learn, Analyze, Protect."
                   ],
                   autoStart: true,
                   loop: true,
