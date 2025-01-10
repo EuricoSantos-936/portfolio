@@ -1,10 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../pages/styles.css";
-import project1 from "../assets/project_portfolio.png";
-import project2 from "../assets/advice_generator.png";
-import project3 from "../assets/newsletter-signup.png";
-import project4 from "../assets/markdown-previewer-fcc.png";
-import project5 from "../assets/cinereservation.png";
 import {
   Grid,
   Card,
@@ -17,7 +12,7 @@ import {
 import { PiGithubLogoBold, PiLinkSimpleBold } from "react-icons/pi";
 
 //to add projects
-const projects = [
+/*const projects = [
   {
     id: 1,
     title: "EuricoPortfolio",
@@ -63,8 +58,16 @@ const projects = [
     code: "https://github.com/EuricoSantos-936/cine-reservation-API-Flask-Tkinter",
   },
 ];
+*/
 
 function Projectpage() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("https://portfolio-backend-django-indol.vercel.app/api/projects/")
+      .then((response) => response.json())
+      .then((data) => setProjects(data));
+  }, []);
   return (
     <Grid container spacing={4} justifyContent="center" className="project">
       {projects.reverse().map((project) => (
@@ -82,7 +85,7 @@ function Projectpage() {
           >
             <CardMedia
               sx={{ height: 140, borderRadius: 2 }}
-              image={project.img}
+              image={`https://res.cloudinary.com/dxl3qbvxa/${project.image}`}
               title={project.title}
             />
             <CardContent>
@@ -99,11 +102,11 @@ function Projectpage() {
                 color="text.secondary"
                 sx={{ textAlign: "center" }}
               >
-                {project.desc}
+                {project.description}
               </Typography>
               <br />
               <Typography sx={{ textAlign: "center", alignSelf: "center" }}>
-                {project.mats}
+                {project.tools}
               </Typography>
             </CardContent>
             <CardActions sx={{ alignSelf: "center" }}>
